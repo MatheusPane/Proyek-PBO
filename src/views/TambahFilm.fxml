@@ -1,16 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="admin.TambahFilmController">
-    <Label text="Tambah Film" style="-fx-font-size: 18px;" />
-    <TextField fx:id="judulField" promptText="Judul Film" />
-    <TextField fx:id="genreField" promptText="Genre" />
-    <TextField fx:id="tahunField" promptText="Tahun Rilis" />
-    <TextField fx:id="durasiField" promptText="Durasi (Menit)" />
-    <TextField fx:id="sutradaraField" promptText="Sutradara" />
-    <TextField fx:id="jadwalField" promptText="Jadwal Tayang (YYYY-MM-DD HH:MM)" />
-    <TextField fx:id="hargaField" promptText="Harga Tiket" />
-    <Button text="Simpan" onAction="#handleSimpanFilm" />
-    <Button text="Kembali" onAction="#handleKembali" />
+<VBox spacing="15" alignment="CENTER" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="admin.TambahFilmController"
+      style="-fx-background-color: linear-gradient(to bottom, #1e3c72, #2a5298); -fx-padding: 30;">
+
+    <!-- Header -->
+    <Label text="Tambah Film" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+
+    <!-- Input Form -->
+    <VBox spacing="10" prefWidth="350">
+        <TextField fx:id="judulField" promptText="Judul Film" style="-fx-background-radius: 8; -fx-padding: 8;"/>
+        <TextField fx:id="genreField" promptText="Genre" style="-fx-background-radius: 8; -fx-padding: 8;"/>
+        <TextField fx:id="tahunField" promptText="Tahun Rilis" style="-fx-background-radius: 8; -fx-padding: 8;"/>
+        <TextField fx:id="durasiField" promptText="Durasi (Menit)" style="-fx-background-radius: 8; -fx-padding: 8;"/>
+        <TextField fx:id="sutradaraField" promptText="Sutradara" style="-fx-background-radius: 8; -fx-padding: 8;"/>
+        <TextField fx:id="jadwalField" promptText="Jadwal Tayang (YYYY-MM-DD HH:MM)" style="-fx-background-radius: 8; -fx-padding: 8;"/>
+        <TextField fx:id="hargaField" promptText="Harga Tiket" style="-fx-background-radius: 8; -fx-padding: 8;"/>
+    </VBox>
+
+    <!-- Button Section -->
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="Simpan" onAction="#handleSimpanFilm" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 8 16;"/>
+        <Button text="Kembali" onAction="#handleKembali" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 8 16;"/>
+    </HBox>
+
 </VBox>

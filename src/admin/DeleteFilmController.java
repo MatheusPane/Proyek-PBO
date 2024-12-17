@@ -10,73 +10,95 @@ import javafx.scene.control.TextField;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class DeleteFilmController {
 
-    @FXML
-    private TextField idFilmField;  // Field untuk ID Film
-    @FXML
-    private Label statusLabel;  // Label untuk status
+    private static final Logger LOGGER = Logger.getLogger(DeleteFilmController.class.getName());
 
-    // Fungsi untuk menangani penghapusan film
     @FXML
-    private void handleHapusFilm(ActionEvent event) {
+    private TextField idFilmField;  // Field untuk input ID Film
+    @FXML
+    private Label statusLabel;      // Label untuk status hasil penghapusan
+
+    // Fungsi untuk menangani tombol hapus film
+    @FXML
+    private void handleHapusFilm(ActionEvent event) throws SQLException {
+        statusLabel.setText(""); // Reset status label
+
+        String idFilmText = idFilmField.getText();
+
+        // Validasi input ID Film
+        if (idFilmText == null || idFilmText.trim().isEmpty()) {
+            showErrorDialog("Input Tidak Valid", "ID Film tidak boleh kosong.");
+            return;
+        }
+
         try {
-            // Ambil ID Film dari TextField
-            int idFilm = Integer.parseInt(idFilmField.getText());
-
-            // Lakukan penghapusan data film
-            deleteFilm(idFilm);
-
-            // Update status label
-            statusLabel.setText("Film berhasil dihapus.");
+            int idFilm = Integer.parseInt(idFilmText); // Konversi ID Film ke Integer
+            deleteFilmFromDatabase(idFilm);           // Hapus film dari database
         } catch (NumberFormatException e) {
-            showErrorDialog("Input Tidak Valid", "Pastikan ID Film diisi dengan benar.");
-        } catch (SQLException e) {
-            showErrorDialog("Error", e.getMessage());
+            showErrorDialog("Input Tidak Valid", "ID Film harus berupa angka.");
         }
     }
 
-    // Fungsi untuk menghapus film dari database
-    private void deleteFilm(int idFilm) throws SQLException {
+    // Metode untuk menghapus film dari database
+    private void deleteFilmFromDatabase(int idFilm) throws SQLException {
         Connection conn = DatabaseConnection.getDBConnection();
 
-        if (conn != null) {
-            try {
-                String query = "DELETE FROM film WHERE id_film = ?";
-                try (PreparedStatement stmt = conn.prepareStatement(query)) {
-                    stmt.setInt(1, idFilm);
-                    int rowsDeleted = stmt.executeUpdate();
+        if (conn == null) {
+            showErrorDialog("Database Error", "Koneksi ke database gagal.");
+            return;
+        }
 
-                    if (rowsDeleted > 0) {
-                        showInfoDialog("Sukses", "Film berhasil dihapus.");
-                    } else {
-                        showErrorDialog("Gagal", "ID Film tidak ditemukan.");
-                    }
+        try {
+            String sql = "DELETE FROM film WHERE id = ?"; // Query SQL
+            try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+                stmt.setInt(1, idFilm);
+
+                int rowsDeleted = stmt.executeUpdate();
+                if (rowsDeleted > 0) {
+                    showInfoDialog("Sukses", "Film berhasil dihapus.");
+                    statusLabel.setText("Film berhasil dihapus.");
+                } else {
+                    showErrorDialog("Gagal", "ID Film tidak ditemukan.");
+                    statusLabel.setText("ID Film tidak ditemukan.");
                 }
-            } finally {
-                if (conn != null) conn.close();
+            }
+        } catch (SQLException e) {
+            LOGGER.log(Level.SEVERE, "SQL Error: {0}", e.getMessage()); // Logging
+            showErrorDialog("Error", "Gagal menghapus film. Coba lagi nanti.");
+        } finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException ex) {
+                    LOGGER.log(Level.WARNING, "Gagal menutup koneksi database: {0}", ex.getMessage());
+                }
             }
         }
     }
 
-    // Fungsi untuk menampilkan dialog informasi
+    // Fungsi menampilkan dialog informasi
     private void showInfoDialog(String title, String content) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(title);
+        alert.setHeaderText(null);
         alert.setContentText(content);
         alert.showAndWait();
     }
 
-    // Fungsi untuk menampilkan dialog error
+    // Fungsi menampilkan dialog error
     private void showErrorDialog(String title, String content) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle(title);
+        alert.setHeaderText(null);
         alert.setContentText(content);
         alert.showAndWait();
     }
 
-    // Fungsi untuk kembali ke menu admin
+    // Fungsi kembali ke menu utama
     @FXML
     private void handleKembali(ActionEvent event) {
         SceneSwitcher.switchScene("/views/AdminMenu.fxml");

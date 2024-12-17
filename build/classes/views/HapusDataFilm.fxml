@@ -1,24 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Alert?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.DeleteFilmController" spacing="20" padding="20">
-    <Label text="Hapus Data Film" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
-    
-    <HBox spacing="10">
-        <Label text="ID Film: "/>
-        <TextField fx:id="idFilmField" promptText="Masukkan ID Film" />
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="admin.DeleteFilmController" spacing="20" alignment="center">
+    <!-- Padding keseluruhan -->
+    <padding>
+        <Insets top="20" right="30" bottom="20" left="30"/>
+    </padding>
+
+    <!-- Label judul -->
+    <Label text="Hapus Data Film" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #333333;"/>
+
+    <!-- Form input ID Film -->
+    <HBox spacing="10" alignment="center">
+        <Label text="ID Film: " style="-fx-font-size: 14px;"/>
+        <TextField fx:id="idFilmField" promptText="Masukkan ID Film" prefWidth="200"/>
     </HBox>
 
-    <Button text="Hapus Film" onAction="#handleHapusFilm" style="-fx-padding: 10px 20px; -fx-font-size: 14px;"/>
-    <Button text="Kembali" onAction="#handleKembali" style="-fx-padding: 10px 20px; -fx-font-size: 14px;"/>
-    
+    <!-- Tombol Hapus Film -->
+    <Button text="Hapus Film" onAction="#handleHapusFilm" 
+            style="-fx-padding: 10px 20px; -fx-font-size: 14px; -fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 8px;" 
+            prefWidth="120"/>
+
+    <!-- Tombol Kembali -->
+    <Button text="Kembali" onAction="#handleKembali" 
+            style="-fx-padding: 10px 20px; -fx-font-size: 14px; -fx-background-color: #f44336; -fx-text-fill: white; -fx-background-radius: 8px;" 
+            prefWidth="120"/>
+
+    <!-- Label status -->
     <HBox spacing="10" alignment="center">
-        <Label fx:id="statusLabel"/>
+        <Label fx:id="statusLabel" style="-fx-font-size: 14px; -fx-text-fill: #666666;"/>
     </HBox>
 </VBox>

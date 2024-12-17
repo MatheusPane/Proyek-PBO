@@ -26,6 +26,10 @@ public class LihatFilmController {
     private TableColumn<Film, Integer> durasiColumn;
     @FXML
     private TableColumn<Film, String> sutradaraColumn;
+    @FXML
+    private TableColumn<Film, String> jadwalColumn; // Tambahan untuk Jadwal
+    @FXML
+    private TableColumn<Film, Integer> hargaColumn; // Tambahan untuk Harga Tiket
 
     /**
      * Inisialisasi data tabel saat controller dimuat.
@@ -38,6 +42,9 @@ public class LihatFilmController {
         tahunColumn.setCellValueFactory(new PropertyValueFactory<>("tahunRilis"));
         durasiColumn.setCellValueFactory(new PropertyValueFactory<>("durasi"));
         sutradaraColumn.setCellValueFactory(new PropertyValueFactory<>("sutradara"));
+        jadwalColumn.setCellValueFactory(new PropertyValueFactory<>("jadwalTayang"));
+        hargaColumn.setCellValueFactory(new PropertyValueFactory<>("hargaTiket"));
+
 
         // Load data ke tabel dari database
         filmTable.setItems(getFilmData());
@@ -52,7 +59,7 @@ public class LihatFilmController {
 
         if (conn != null) {
             try {
-                String sql = "SELECT judul, genre, tahun_rilis, durasi, sutradara FROM film";
+                String sql = "SELECT judul, genre, tahun_rilis, durasi, sutradara, jadwal_tayang, harga_tiket FROM film";
                 try (PreparedStatement stmt = conn.prepareStatement(sql)) {
                     ResultSet resultSet = stmt.executeQuery();
 
@@ -62,9 +69,11 @@ public class LihatFilmController {
                         int tahunRilis = resultSet.getInt("tahun_rilis");
                         int durasi = resultSet.getInt("durasi");
                         String sutradara = resultSet.getString("sutradara");
+                        String jadwalTayang = resultSet.getString("jadwal_tayang");
+                        int hargaTiket = resultSet.getInt("harga_tiket");
 
                         // Tambahkan data film ke ObservableList
-                        data.add(new Film(judul, genre, tahunRilis, durasi, sutradara));
+                        data.add(new Film(judul, genre, tahunRilis, durasi, sutradara, jadwalTayang, hargaTiket));
                     }
                 }
             } catch (SQLException e) {

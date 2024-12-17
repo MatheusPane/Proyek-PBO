@@ -2,14 +2,22 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
 
-<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="admin.LihatKursiController" spacing="10" alignment="CENTER" style="-fx-padding: 20;">
-    <Label text="Lihat Data Kursi" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
-    <TableView fx:id="kursiTable">
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="admin.LihatKursiController" spacing="15" alignment="CENTER" style="-fx-padding: 30; -fx-background-color: #fdfdfd; -fx-border-color: #b0bec5; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10;">
+    <!-- Title -->
+    <Label text="Lihat Data Kursi" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #FF9800;" />
+
+    <!-- Table View -->
+    <TableView fx:id="kursiTable" style="-fx-border-color: #bdbdbd; -fx-background-radius: 5; -fx-border-radius: 5;">
         <columns>
-            <TableColumn text="Nomor Kursi" fx:id="nomorKursiColumn" />
-            <TableColumn text="Status" fx:id="statusColumn" />
+            <TableColumn text="Nomor Kursi" fx:id="nomorKursiColumn" style="-fx-alignment: CENTER;" />
+            <TableColumn text="Status" fx:id="statusColumn" style="-fx-alignment: CENTER;" />
         </columns>
     </TableView>
-   <Button text="Kembali" onAction="#handleKembali"/>
+
+    <!-- Buttons -->
+    <Button text="Kembali" onAction="#handleKembali"
+            style="-fx-background-color: #607d8b; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 8px 15px; -fx-background-radius: 5;" />
 </VBox>

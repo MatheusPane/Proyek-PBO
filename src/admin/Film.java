@@ -7,13 +7,17 @@ public class Film {
     private int tahunRilis;
     private int durasi;
     private String sutradara;
+    private String jadwalTayang;
+    private int hargaTiket;
 
-    public Film(String judul, String genre, int tahunRilis, int durasi, String sutradara) {
+    public Film(String judul, String genre, int tahunRilis, int durasi, String sutradara, String jadwalTayang, int hargaTiket) {
         this.judul = judul;
         this.genre = genre;
         this.tahunRilis = tahunRilis;
         this.durasi = durasi;
         this.sutradara = sutradara;
+        this.jadwalTayang = jadwalTayang;
+        this.hargaTiket = hargaTiket;
     }
 
     public String getJudul() {
@@ -34,5 +38,12 @@ public class Film {
 
     public String getSutradara() {
         return sutradara;
+    }
+    
+    public String getJadwalTayang() {
+        return jadwalTayang;
+    }
+    public int getHargaTiket() {
+        return hargaTiket;
     }
 }
