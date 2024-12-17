@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="admin.TambahFilmController">
+    <Label text="Tambah Film" style="-fx-font-size: 18px;" />
+    <TextField fx:id="judulField" promptText="Judul Film" />
+    <TextField fx:id="genreField" promptText="Genre" />
+    <TextField fx:id="tahunField" promptText="Tahun Rilis" />
+    <TextField fx:id="durasiField" promptText="Durasi (Menit)" />
+    <TextField fx:id="sutradaraField" promptText="Sutradara" />
+    <TextField fx:id="jadwalField" promptText="Jadwal Tayang (YYYY-MM-DD HH:MM)" />
+    <TextField fx:id="hargaField" promptText="Harga Tiket" />
+    <Button text="Simpan" onAction="#handleSimpanFilm" />
+    <Button text="Kembali" onAction="#handleKembali" />
+</VBox>

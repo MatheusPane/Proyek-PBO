@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/admin/DeleteFilm.java</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/views/AdminMenu.fxml</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/views/LihatFilm.fxml</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/controllers/PelangganMenuController.java</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/views/RegisterView.fxml</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/admin/LihatKursiController.java</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/controllers/BookingController.java</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/views/HapusDataFilm.fxml</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/admin/TambahKursiController.java</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/admin/InsertFilm.java</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/controllers/FXMLDocumentController.java</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/admin/SceneSwitcher.java</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/views/LihatKursi.fxml</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/controllers/LoginController.java</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/admin/LihatFilmController.java</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/admin/DeleteFilmSeat.java</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/admin/UpdateKursiController.java</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/admin/JavaToMySQL.java</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/admin/Kursi.java</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/controllers/RegisterController.java</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/views/LoginView.fxml</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/models/Booking.java</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/admin/DeleteKursi.java</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/admin/DatabaseConnection.java</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/admin/UpdateFilm.java</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/views/TambahKursi.fxml</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/admin/Film.java</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/admin/UpdateKursi.java</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/views/UpdateKursi.fxml</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/admin/Main.java</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/admin/DataReceiver.java</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/models/Movie.java</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/views/BookingView.fxml</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/cinematicketbooking/CinemaTicketBooking.java</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/views/UpdateFilm.fxml</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/views/HapusKursi.fxml</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/admin/AdminMenuController.java</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/admin/InsertKursi.java</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/models/Ticket.java</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/admin/UpdateFilmController.java</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/views/TambahFilm.fxml</file>
+            <file>file:/D:/Perkuliahaan/Sem%203/PBO/proyek01/proyek01/CinemaTicketBooking/src/admin/HapusKursiController.java</file>
+        </group>
+    </open-files>
+</project-private>

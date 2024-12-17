@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="admin.LihatFilmController">
+    <Label text="========== Data Film ==========" style="-fx-font-size: 16px;" />
+    
+    <TableView fx:id="filmTable" prefWidth="600" prefHeight="400">
+        <columns>
+            <TableColumn fx:id="judulColumn" text="Judul Film" prefWidth="200"/>
+            <TableColumn fx:id="genreColumn" text="Genre" prefWidth="150"/>
+            <TableColumn fx:id="tahunColumn" text="Tahun Rilis" prefWidth="100"/>
+            <TableColumn fx:id="durasiColumn" text="Durasi (Menit)" prefWidth="100"/>
+            <TableColumn fx:id="sutradaraColumn" text="Sutradara" prefWidth="150"/>
+        </columns>
+    </TableView>
+
+    <Button text="Kembali" onAction="#handleKembali"/>
+</VBox>

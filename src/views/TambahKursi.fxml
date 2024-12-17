@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="admin.TambahKursiController" spacing="10" alignment="CENTER" style="-fx-padding: 20;">
+    <Label text="Tambah Kursi" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+    <ComboBox fx:id="judulFilmComboBox" promptText="Pilih Judul Film" />
+    <Button text="Simpan 50 Kursi" onAction="#handleSimpan" />
+    <Button text="Kembali" onAction="#handleKembali" />
+</VBox>
+
+    

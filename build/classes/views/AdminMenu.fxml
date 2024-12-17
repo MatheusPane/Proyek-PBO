@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="admin.AdminMenuController" spacing="10" alignment="CENTER" style="-fx-padding: 20;">
+    <Label text="Menu Admin" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+    
+    <!-- Tombol Film -->
+    <Button text="Tambah Film" onAction="#handleTambahFilm" />
+    <Button text="Lihat Data Film" onAction="#handleLihatDataFilm" />
+    <Button text="Perbarui Data Film" onAction="#handlePerbaruiDataFilm" />
+    <Button text="Hapus Data Film" onAction="#handleHapusDataFilm" />
+    
+    <!-- Tombol Kursi -->
+    <Button text="Tambah Kursi" onAction="#handleTambahKursi" />
+    <Button text="Lihat Data Kursi" onAction="#handleLihatDataKursi" />
+    <Button text="Perbarui Data Kursi" onAction="#handlePerbaruiDataKursi" />
+    <Button text="Hapus Data Kursi" onAction="#handleHapusDataKursi" />
+    
+    <!-- Tombol Keluar -->
+    <Button text="Keluar" onAction="#handleKeluar" style="-fx-text-fill: red;" />
+</VBox>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="admin.LihatKursiController" spacing="10" alignment="CENTER" style="-fx-padding: 20;">
+    <Label text="Lihat Data Kursi" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+    <TableView fx:id="kursiTable">
+        <columns>
+            <TableColumn text="Nomor Kursi" fx:id="nomorKursiColumn" />
+            <TableColumn text="Status" fx:id="statusColumn" />
+        </columns>
+    </TableView>
+   <Button text="Kembali" onAction="#handleKembali"/>
+</VBox>

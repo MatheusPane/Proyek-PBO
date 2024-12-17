@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="admin.UpdateFilmController" alignment="CENTER" hgap="10" vgap="10">
+    <Label text="ID Film:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <TextField fx:id="idFilmField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+    
+    <Label text="Judul Baru:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <TextField fx:id="judulField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    
+    <Label text="Genre Baru:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <TextField fx:id="genreField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    
+    <Label text="Durasi Baru (menit):" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+    <TextField fx:id="durasiField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+    
+    <Label text="Sutradara Baru:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+    <TextField fx:id="sutradaraField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+    
+    <Button text="Perbarui" onAction="#handleUpdateFilm" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+    <Button text="Kembali" onAction="#handleKembali" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+</GridPane>

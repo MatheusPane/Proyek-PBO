@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controllers.BookingController"
+      spacing="10" alignment="CENTER" style="-fx-padding: 20;">
+    
+    <Label text="Pemesanan Tiket" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+    
+    <TextField promptText="Nama Pembeli" fx:id="buyerNameField" />
+    <ComboBox fx:id="filmTitleComboBox" promptText="Pilih Film" />
+    
+    <Label text="Jadwal Tayang:" />
+    <TextField fx:id="totalField" editable="false" />
+    
+    <ListView fx:id="seatListView" prefHeight="100" />
+    <TextField promptText="Jumlah Tiket" fx:id="quantityField" />
+    <TextArea fx:id="bookingDetailsArea" promptText="Detail Pemesanan" editable="false" />
+    
+    <HBox spacing="10">
+        <Button text="Pesan" onAction="#handleBook" />
+        <Button text="Reset" onAction="#handleReset" />
+        <Button text="Keluar" onAction="#handleExit" />
+    </HBox>
+</VBox>
